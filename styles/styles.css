@@ -584,6 +584,7 @@ body {
   background-image: url("../images/filter-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 1200px;
 }
 
 .breadcrumbs-link {
@@ -615,7 +616,7 @@ body {
 }
 
 .header-inner-container {
-  padding: 35px 70px 70px 70px;
+  padding: 35px 70px 69px 70px;
 }
 
 .catalog-filter {
@@ -631,7 +632,7 @@ body {
 }
 
 .catalog-filter-home {
-  flex-grow: 1;
+  margin-right: 152px;
 }
 
 .catalog-filter-infrastructure {
@@ -657,7 +658,17 @@ body {
 .button {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  padding:0;
   margin-right: 8px;
+  min-width: 48px;
+  min-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:last-child {
+  margin:0;
 }
 
 .button:hover {
@@ -674,7 +685,6 @@ body {
 
 .button-image {
   display: block;
-  margin: 17px 16px;
 }
 
 .button-black {
@@ -682,8 +692,13 @@ body {
 }
 
 .select-control {
+  appearance: none;
+  background-image: url("../images/icons/down-arrow-icon.svg");
+  background-repeat: no-repeat;
+  background-position-x: 258px;
+  background-position-y: 18px;
+  padding-left: 18px;
   margin-right: 70px;
-  padding: 14px 20px;
   border-radius: 4px;
   border: 2px solid #e5e5e5;
   min-height: 49px;
@@ -691,6 +706,7 @@ body {
   color: #333333;
   font-size: 18px;
   line-height: 21px;
+  font-family: inherit;
 }
 
 .select-control:hover {
@@ -703,6 +719,12 @@ body {
 
 .button-view {
   margin-bottom: 32px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  min-width: 191px;
+  min-height: 36px;
+  padding:0;
 }
 
 .searched {
@@ -729,7 +751,7 @@ body {
   flex-direction: column;
 }
 
-.control {
+.control:not(:last-child) {
   margin-bottom: 16px;
 }
 
@@ -738,6 +760,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+  padding:0;
 }
 
 .catalog {
@@ -787,6 +810,7 @@ outline: none;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+  font-family: inherit;
 }
 
 .min-price-fork-form,.max-price-fork-form {
@@ -826,16 +850,21 @@ outline: none;
   border: 0;
   color: #fff;
   border-radius: 4px;
-  padding: 8px 50px;
   text-decoration: none;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+
 }
 
 .button-cancelled {
   background-color: rgba(131, 179, 211, 0);
+  min-width: 191px;
+  min-height: 36px;
+  padding:0;
 }
 
 .button-cancelled:hover {
@@ -871,10 +900,16 @@ outline: none;
   color: #000;
   text-align: center;
   border: 1px solid #E6E6E6;
+  border-radius: 4px;
 }
 
 .card-third {
   margin-right: 0;
+}
+
+.hotel-card-picture {
+  max-width: 300px;
+  min-height: 212px;
 }
 
 .hotel-card-title {
@@ -1153,7 +1188,7 @@ opacity: 0.6;
 
 .radio-decoration {
     position: absolute;
-    top: 2px;
+    top: 0;
     left: 0;
     width: 20px;
     height: 20px;
@@ -1171,6 +1206,7 @@ opacity: 0.6;
   display: flex;
   max-height: 48px;
   max-width: 288px;
+  margin-bottom: 36px;
 }
 
 .range {
@@ -1181,7 +1217,7 @@ opacity: 0.6;
 
 .range-bar {
   height: 4px;
-  width: 190px;
+  width: 226px;
   background-color: #fff;
   position: absolute;
 }
@@ -1213,7 +1249,7 @@ opacity: 0.6;
 }
 
 .toggle-max {
-  left: 159px;
+  left: 182px;
   border-radius: 5px;
   border: 0;
 }
